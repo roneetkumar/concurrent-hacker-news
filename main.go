@@ -101,18 +101,6 @@ func getTopStories(numStories int) ([]item, error) {
 	return stories, nil
 }
 
-//		res := <-resultCh
-// 		if res.err != nil {
-// 			continue
-// 		}
-
-// 		if isStoryLink(res.item) {
-// 			stories = append(stories, res.item)
-// 			if len(stories) >= numStories {
-// 				break
-// 			}
-// 		}
-
 func isStoryLink(item item) bool {
 	return item.Type == "story" && item.URL != ""
 }
